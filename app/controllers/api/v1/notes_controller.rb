@@ -4,7 +4,7 @@ class Api::V1::NotesController < ApplicationController
 
   def create
     @note = Note.new(note_params)
-    # authorize @note
+    authorize @note
 
     if @note.save
     	render json: @note
