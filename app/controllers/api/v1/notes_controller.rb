@@ -3,7 +3,7 @@ class Api::V1::NotesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @note = Note.new(note_params)
+    @note = current_user.notes.build(note_params)
     authorize @note
 
     if @note.save
