@@ -52,4 +52,7 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  ENV['SLACK_WEBHOOK_URL'] = "https://hooks.slack.com/services/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"
+  ENV['SLACK_CHANNEL_NAME'] = "#notifications"
 end

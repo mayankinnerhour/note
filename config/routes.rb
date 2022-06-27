@@ -7,7 +7,10 @@ Rails.application.routes.draw do
         post "sign_up", to: "registrations#create"
         post "sign_in", to: "sessions#create"
       end
-      resources :notes, only: [:create]
+      resources :notes
+      # get "get_mayank/:id", to: "notes#mayank_get"
+      # patch "update_mayank/:id", to: "notes#mayank_update"
     end
   end
+  resources :appointments
 end

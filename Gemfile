@@ -18,6 +18,14 @@ gem 'puma', '~> 3.11'
 gem "devise"
 gem 'devise_token_auth'
 gem "pundit"
+gem "slack-notifier"
+gem 'whenever', require: false  #for cron jobs
+gem 'httparty'
+# Use delayed job for running background jobs
+gem 'delayed_job_active_record'
+
+# Need daemons to start delayed_job
+gem 'daemons'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

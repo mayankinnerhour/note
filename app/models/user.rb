@@ -6,5 +6,9 @@ class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
 
   #Relationship
-  has_many :notes, dependent: :destroy
+  has_many :permissions
+  has_many :notes, through: :permissions
+
+  validates :email, presence: true
+  validates :email, uniqueness: true
 end
