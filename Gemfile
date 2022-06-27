@@ -23,6 +23,7 @@ gem 'whenever', require: false  #for cron jobs
 gem 'httparty'
 # Use delayed job for running background jobs
 gem 'delayed_job_active_record'
+gem 'faker'
 
 # Need daemons to start delayed_job
 gem 'daemons'
